@@ -7,19 +7,31 @@
 	<title>标题</title>
 	<meta name="Keywords" content="关键字">
 	<meta name="Description" content="描述">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!--样式 css 变漂亮 衣柜-->
   <style type="text/css">
 	*{margin:0px; padding:0px;}
+	body,html{width: 100vw;height: 100vh;overflow: hidden}
+	body {
+	background-image: url('img/timg.jpg');
+	background-repeat: no-repeat;
+      /*background: -webkit-radial-gradient(red 5%, pink 60%, #fff 15%); !* Safari 5.1 - 6.0 *!*/
+      /*background: -o-radial-gradient(red 5%, pink 60%, #fff 15%); !* Opera 11.6 - 12.0 *!*/
+      /*background: -moz-radial-gradient(red 5%, pink 60%, #fff 15%); !* Firefox 3.6 - 15 *!*/
+      /*background: radial-gradient(red 5%, pink 60%, #fff 15%); !* 标准的语法 *!*/
+    }
     /*3d相册*/
-		.img3d{width:400px; height:400px; margin:50px auto; perspective:1200px;/*眼睛看3D 元素的距离*/ perspective-origin:50% 100px;/*perspective-origin 属性定义 3D 元素所基于的 X 轴和 Y 轴 该属性允许您改变 3D 元素的底部位置*/}
-		.img3d .main{width:280px; margin:0px auto; transform-style:preserve-3D;/*设置为3D模式*/ animation: sun 4S linear  infinite;} 
-		.img3d .main div{width:280px; height:280px; position:absolute; opacity:0.6; backface-visibility:hidden;/*当不面向我们的时候，隐藏起来*/}
-		.img3d .main .right{transform:rotateY(90deg) translateX(140px); transform-origin:center right;}
-		.img3d .main .left{transform:rotateY(-90deg) translateX(-140px); transform-origin:center left;}
-		.img3d .main .top{transform:rotateX(-90deg) translateY(-140px); transform-origin:top center;}
-		.img3d .main .bottom{transform:rotateX(90deg) translateY(140px); transform-origin:bottom center;}
-		.img3d .main .back{transform:translateZ(-140px) rotateY(180deg); }
-		.img3d .main .front{transform:translateZ(140px);}
+		.img3d{width:400px; height:400px; margin:20vh auto; perspective:1200px;/*眼睛看3D 元素的距离*/ perspective-origin:50% 100px;/*perspective-origin 属性定义 3D 元素所基于的 X 轴和 Y 轴 该属性允许您改变 3D 元素的底部位置*/}
+		.img3d .main{width:280px; margin:0px auto; transform-style:preserve-3D;/*设置为3D模式*/ animation: sun 4S linear  infinite;}
+		.img3d .main div{width:200px; height:200px; position:absolute; opacity:0.8; /*backface-visibility:hidden;*//*当不面向我们的时候，隐藏起来*/}
+		.img3d .main div img{width: 100%;}
+		.img3d .main .right{transform:rotateY(90deg) translateX(100px); transform-origin:center right;}
+		.img3d .main .left{transform:rotateY(-90deg) translateX(-100px); transform-origin:center left;}
+		.img3d .main .top{transform:rotateX(-90deg) translateY(-100px); transform-origin:top center;}
+		.img3d .main .bottom{transform:rotateX(90deg) translateY(100px); transform-origin:bottom center;}
+		.img3d .main .back{transform:translateZ(-100px) rotateY(180deg); }
+		.img3d .main .front{transform:translateZ(100px);}
 		@keyframes sun{
 			0%{transform:rotate(0deg);}
 			25%{transform:rotateY(90deg);}
@@ -27,11 +39,14 @@
 			75%{transform:rotateY(270deg);}
 			100%{transform:rotateY(360deg);}
 		}
-		.img3d:hover{perspective:700px}
-	/*3dend*/ 
+		header img{ width: 100%;margin-top: 48px;}
+	/*3dend*/
   </style>
  </head>
  <body>
+    <header>
+        <img src="img/1515581189_641839.png" alt="">
+    </header>
 	<div class="img3d">
 		<div class="main">
 			<div class="front"> <img src="img/1.jpg"/> </div>
